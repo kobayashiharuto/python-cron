@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: "cron-python"
+    working_dir: "/root/"
+    tty: true
+    volumes:
+      - ./app:/root/app
+      - ./log:/root/log
+      - ./cron:/root/cron

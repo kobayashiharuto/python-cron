@@ -1,0 +1,1 @@
+* * * * * /usr/local/bin/python /root/app/request.py  1>> /root/log/log 2>> ~/cron-err.log
