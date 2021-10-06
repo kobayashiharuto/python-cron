@@ -1,6 +1,10 @@
 import requests
+from bs4 import BeautifulSoup
 
-hoge = requests.get(
-    'https://hbh1qjsn5d.execute-api.ap-northeast-1.amazonaws.com/product/version/ios')
+res = requests.get('https://example.com/')
+soup = BeautifulSoup(res.text, 'html.parser')
 
-print(hoge.text)
+title = soup.select_one('h1')
+
+if title is not None:
+    print(title.text)
